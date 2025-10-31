@@ -17,7 +17,7 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: var(--color-negro);
-    
+    /* Corrección clave para eliminar el scroll horizontal forzado por desbordamiento */
     overflow-x: hidden; 
 }
 
@@ -311,7 +311,6 @@ p {
 }
 
 .columna-texto li {
-    
     background: url("imagenes/icon-check.png") left top / 28px 28px no-repeat;
     padding-left: 30px;
     margin-bottom: 15px;
@@ -345,7 +344,6 @@ p {
     grid-template-columns: 1fr 1.5fr;
     gap: 30px;
     align-items: start;
- 
     margin-left: auto; 
     margin-right: 0;
 }
@@ -397,13 +395,14 @@ p {
     margin-right: 0px;
 }
 
+
 .cards-scroll {
     display: grid;
     grid-auto-flow: column;
     gap: 30px;
     padding-bottom: 10px;
-    height: 800px;
-    margin-left: 25px;
+    height: 450px; 
+    margin-left: 0px; 
     margin-right: 0px;
 }
 
@@ -459,6 +458,27 @@ p {
 #seccion-expandable-cards {
     padding: 120px 0;
 }
+
+
+.container-7-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 var(--padding-horizontal);
+}
+
+.cajas-izquierdas {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.caja-derecha-separada {
+    align-self: flex-start; 
+}
+
+
 
 .caja-quinta {
     width: 300px;
@@ -555,7 +575,6 @@ p {
 }
 
 .faq {
-   
     width: 100%; 
     padding: 10px 0;
     margin-bottom: 0;
@@ -582,7 +601,6 @@ p {
 
 .faq-pregunta::after {
     content: '';
-    
     background: url("imagenes/flecha%20acordeon.png") center center / 100% no-repeat;
     width: 30px;
     height: 30px;
@@ -608,7 +626,6 @@ p {
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
-
     margin-left: 40px; 
     margin-right: 40px;
 }
@@ -638,7 +655,7 @@ p {
 }
 
 @media (max-width: 1024px) {
-    .navegacion-flex, .contenido-principal, .flex-dos-columnas, .flex-tres-columnas {
+    .navegacion-flex, .contenido-principal, .flex-dos-columnas, .flex-tres-columnas, .container-7-cards {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -656,9 +673,26 @@ p {
     }
     .columna-derecha-testimonio {
         overflow-x: scroll;
+        margin-left: 20px;
     }
     .cards-scroll {
         height: auto;
+        margin-left: 0;
+        margin-right: 20px; 
+    }
+
+    .container-7-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cajas-izquierdas {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .caja-quinta {
+        width: 90%;
+        max-width: 400px;
     }
 }
 
@@ -711,5 +745,10 @@ p {
     .faq-pregunta {
         font-size: 18px;
         height: 50px;
+    }
+  
+    .cajas-izquierdas {
+        flex-direction: column;
+        gap: 20px;
     }
 }
