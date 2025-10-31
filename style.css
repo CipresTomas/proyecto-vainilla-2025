@@ -17,6 +17,8 @@ body {
     font-size: 100%;
     line-height: 1.5;
     color: var(--color-negro);
+    
+    overflow-x: hidden; 
 }
 
 h1, h2, h3, h4 {
@@ -309,6 +311,7 @@ p {
 }
 
 .columna-texto li {
+    
     background: url("imagenes/icon-check.png") left top / 28px 28px no-repeat;
     padding-left: 30px;
     margin-bottom: 15px;
@@ -342,8 +345,9 @@ p {
     grid-template-columns: 1fr 1.5fr;
     gap: 30px;
     align-items: start;
-    margin-left: 100px;
-    margin-right: 0px;
+    /* AJUSTE RESPONSIVO */
+    margin-left: auto; 
+    margin-right: 0;
 }
 
 .columna-izquierda-testimonio {
@@ -551,7 +555,8 @@ p {
 }
 
 .faq {
-    width: 700px;
+   
+    width: 100%; 
     padding: 10px 0;
     margin-bottom: 0;
 }
@@ -577,6 +582,7 @@ p {
 
 .faq-pregunta::after {
     content: '';
+    
     background: url("imagenes/flecha%20acordeon.png") center center / 100% no-repeat;
     width: 30px;
     height: 30px;
@@ -602,8 +608,9 @@ p {
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+
+    margin-left: 40px; 
+    margin-right: 40px;
 }
 
 .texto-footer {
